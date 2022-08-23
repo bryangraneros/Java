@@ -1,0 +1,40 @@
+package ej02pkg;
+
+public class Ej02class {
+	public static void main(String[] args) {
+
+		int n = 0, m = 0, i, j;
+		int[][] mat = { { 2, 4, 7, 8 }, { 4, 6, 7, 2 }, { 1, 2, 2, 4 } };
+		int[][] nue = new int[3][4];
+
+		n = 3;// mat.length;
+		m = 4;// mat[0].length;
+
+		for (i = 0; i < n; i++) {
+			for (j = 0; j < m; j++) {
+				nue[i][j] = mat[i][j];
+				if (i != 0)
+					nue[i][j] += mat[(i - 1)][j];
+				if (j != 0)
+					nue[i][j] += mat[i][(j - 1)];
+				if (i != n - 1)
+					nue[i][j] += mat[(i + 1)][j];
+				if (j != m - 1)
+					nue[i][j] += mat[i][(j + 1)];
+			}
+		}
+		for (i = 0; i < n; i++) {
+			for (j = 0; j < m; j++) {
+				System.out.println(nue[i][j]);
+			}
+		}
+
+    // VER basicas-entrada-salida
+		// CUANDO USO ARCHIVOS USAR CONFIGURACION INGLESA POR EL TEMA DE LA COMA Y EL PUNTO 
+		// POR DEFECTO EL DELIMITADOR ES CUALQUIER CARACTER VACIO
+		// LO CAMBIO POR EL ENTER SI LO NECESITO
+		// /R RETORNO DE CARRO -> PONE AL CURSOR AL PRINCIPIO
+		
+		
+	}
+}

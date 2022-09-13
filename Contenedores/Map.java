@@ -22,6 +22,9 @@ public class Map {
 		System.out.println("");
 		System.out.println(mapa.toString());
 		
+		mapa.getOrDefault("Ariel", 0); // SI NO EXISTE ME DA EL VALOR QUE MARQUE COMO DEFAULT
+		mapa.putIfAbsent("Ariel", "32") // LO PONE SI NO ESTA
+		
 		/*
 		contiene -> containsKey / constainsValue
 		agregar -> put
@@ -34,6 +37,8 @@ public class Map {
 		
 		como obtengo las entradas? -> entryset
 		imprimir
+		
+		get -> obtengo con una clave sino obtengo null
 		*/
 		
 	}
